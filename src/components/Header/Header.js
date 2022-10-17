@@ -1,12 +1,11 @@
-import React, {} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../contexts/UserContext';
 import logo from '../../images/Logo.svg';
 import './Header.css';
-
+import { AuthContext } from '../../context/UserContext';
 
 const Header = () => {
-    const { user, logOut } = (AuthContext);
+    const { user, logOut } = useContext(AuthContext)
     return (
         <nav className='header'>
             <img src={logo} alt="" />
@@ -17,7 +16,7 @@ const Header = () => {
                 <Link to="/about">About</Link>
                 {
                     user?.uid ?
-                    <button onClick={logOut}></button>
+                    <button className='btn-logout' onClick={logOut}>Log Out</button>
                     :
                         <>
                             <Link to="/login">Login</Link>
