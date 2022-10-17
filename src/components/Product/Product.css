@@ -43,3 +43,23 @@
 .btn-cart:hover{
     background-color: orange;
 }
+/* @media screen and (max-width: 500px) {
+    .product{
+        width: 200px;
+        height: 410px;
+        border: 1px solid #95A0A7;
+        border-radius: 8px;
+        gap: 30px;
+    }
+    .product img{
+        width: 190px;
+        height: 200px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .product-info{
+        margin-bottom: 0 10px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+} */
